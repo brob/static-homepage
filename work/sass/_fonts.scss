@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'open-sans-light';
+    src:url('../fonts/OpenSans-Light-webfont.eot?28383');
+    src:url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Light-webfont.woff?28383') format('woff'),
+    url('../fonts/OpenSans-Light-webfont.ttf?28383') format('truetype'),
+    url('../fonts/OpenSans-Light-webfont.svg?28383') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'voltaire';
+    src:url('../fonts/voltaire-regular-webfont.eot?28383');
+    src:url('../fonts/voltaire-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/voltaire-regular-webfont.woff?28383') format('woff'),
+    url('../fonts/voltaire-regular-webfont.ttf?28383') format('truetype'),
+    url('../fonts/voltaire-regular-webfont.svg?28383') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'icons';
+    src:url('../fonts/icomoon.eot?28383');
+    src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff?28383') format('woff'),
+    url('../fonts/icomoon.ttf?28383') format('truetype'),
+    url('../fonts/icomoon.svg?28383') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icons';
+    color: $primary-accent;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+    content: "\e600";
+    font-size: $big-icon-font;
+}
+.icon-github:before {
+    content: "\e601";
+    font-size: $big-icon-font;
+
+}
+.icon-medium:before {
+    content: "\e602";
+    font-size: $big-icon-font;
+
+}
