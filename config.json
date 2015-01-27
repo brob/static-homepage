@@ -1,9 +1,9 @@
 {
   "locals": {
-    "name": "Bootstrapped",
-    "url": "http://awesomeapp.com/",
-    "description": "Forget about drag'n'drop, this is where it's at!",
-    "keywords": "awesome, fast, snappy, instant, horse, pony, unicorn",
+    "name": "Bryan Robinson",
+    "url": "http://bryanlrobinson.com/",
+    "description": "Design and UX Strategist and Front-end Developer based in Memphis, TN",
+    "keywords": "development, ux, strategy",
 	"data": "projects.json"
   },
   "plugins": [
