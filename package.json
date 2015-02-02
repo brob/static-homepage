@@ -1,4 +1,10 @@
 {
+  "name": "brob-portfolio",
+  "version": "0.0.1",
+  "description": "",
+  "repository": "",
+  "main": "work/js/index.js",
+
   "dependencies": {
     "browsernizr": "*",
     "grunt": "*",
@@ -13,5 +19,39 @@
     "wintersmith-nunjucks": "*"
   },
   "repository": "none",
-  "devDependencies": {}
+  "devDependencies": {
+    "browser-sync": "^1.7.3",
+    "browserify": "^6.2.0",
+    "debowerify": "^1.2.0",
+    "envify": "^3.0.0",
+    "jest-cli": "~0.1.17",
+    "node-sass": "^1.2.3",
+    "parallelshell": "^1.0.0",
+    "reactify": "^0.15.2",
+    "uglify-js": "~2.4.15",
+    "watchify": "^2.1.1"
+  },
+
+  "scripts": {
+    "start": "parallelshell 'watchify -o ./contents/scripts/index.jsx -v -d .' ",
+    "build": "NODE_ENV=production browserify . | uglifyjs -cm > js/bundle.js",
+    "test": "jest",
+    "browser-sync": "browser-sync start --server --files='js/bundle.js, index.html, css/style.css'",
+    "node-sass": "node-sass --source-map css/style.css.map scss/style.scss css/style.css && autoprefixer css/style.css",
+    "watch-sass": "nodemon -w scss -e scss -x 'npm run node-sass'"
+  },
+
+  "author": "Bill Fisher",
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ],
+      "envify",
+      "debowerify"
+    ]
+  }
 }
