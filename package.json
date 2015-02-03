@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "repository": "",
-  "main": "work/js/index.js",
+  "main": "work/js/app.js",
 
   "dependencies": {
     "browsernizr": "*",
