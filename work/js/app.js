@@ -7,5 +7,5 @@ var React = require('react'),
 
 ProjectData.then(function(projects) {
     React.render(<ProjectView projects={projects} />, document.getElementById('footer'));
-})
+});
 

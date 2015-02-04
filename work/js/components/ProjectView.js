@@ -28,7 +28,7 @@ var ProjectView = React.createClass({
         var projectList = [],
             filters = [],
             filterList = [];
-
+        console.log(this.props.projects.projects);
         this.props.projects.projects.forEach(function(project) {
             project.fields.forEach(function(field) {
                 if(filters.indexOf(field) === -1) {

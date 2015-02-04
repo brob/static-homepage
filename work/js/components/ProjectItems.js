@@ -6,7 +6,10 @@ var ProjectItem = React.createClass({
         var project = this.props.project;
 
         return (
-            <div>{project.name}</div>
+            <div>
+            {project.name}<br />
+            <img src={project.covers[404]} />
+            </div>
         )
     }
 
