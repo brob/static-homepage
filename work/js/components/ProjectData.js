@@ -1,17 +1,11 @@
-var $ = require('jQuery'),
-    Projects = $.ajax({
+var $ = require('jQuery');
+    module.exports = $.ajax({
         type: 'GET',
-        url: '/scripts/data.jsonp',
+        url: 'https://www.behance.net/v2/users/bryanlrobinson/projects?api_key=o7ttoWgQDgJ03RcfR3vdp7gUfdGnJTR6&callback=myCallbackFunction',
         async: false,
         jsonpCallback: 'myCallbackFunction',
         contentType: "application/json",
-        dataType: 'jsonp',
-        success: function(json) {
-            module.exports = json;
-        },
-        error: function(e) {
-            console.log(e.message);
-        }
+        dataType: 'jsonp'
     });
 
 
