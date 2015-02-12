@@ -1,7 +1,8 @@
 var React = require('react');
 var $ = require('jQuery'),
     ProjectFilters = require('./ProjectFilters.js'),
-    ProjectItem = require('./ProjectItems.js');
+    ProjectItem = require('./ProjectItems.js'),
+    ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 var ProjectView = React.createClass({
 
@@ -13,15 +14,15 @@ var ProjectView = React.createClass({
     },
 
     handleClick: function(filterName) {
-        console.log(filterName);
+
         var filterProducts = this.props.projects.projects.filter(function(project) {
             return project.fields.indexOf(filterName) > -1
         });
-
         this.setState({
             projects: filterProducts,
             activeFilter: filterName
-        })
+        });
+
     },
 
     render: function() {
@@ -40,7 +41,7 @@ var ProjectView = React.createClass({
 
         filters.forEach(function(filter) {
 
-            filterList.push(<ProjectFilters filter={filter} key={filter} onUserInput={this.handleClick} />)
+            filterList.push(<ProjectFilters {...this.state} filter={filter} key={filter} onUserInput={this.handleClick} />)
         }.bind(this));
 
         this.state.projects.forEach(function(project) {
@@ -51,9 +52,13 @@ var ProjectView = React.createClass({
 
 
         return (
-            <div>
-                {filterList}
-                {projectList}
+            <div className="container">
+                <ul className="inline-list">
+                    {filterList}
+                </ul>
+                    <ReactCSSTransitionGroup component="ul" className="small-block-grid-3" transitionName="projectFilter">
+                        {projectList}
+                    </ReactCSSTransitionGroup>
             </div>
         )
     }

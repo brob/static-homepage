@@ -2,9 +2,8 @@
   "name": "brob-portfolio",
   "version": "0.0.1",
   "description": "",
-  "repository": "",
+  "repository": "none",
   "main": "work/js/app.js",
-
   "dependencies": {
     "browsernizr": "*",
     "grunt": "*",
@@ -15,10 +14,11 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "^0.4.6",
     "grunt-webfont": "^0.5.1",
+    "react": "^0.12.2",
+    "react-magic-move": "^0.1.0",
     "underscore": "*",
     "wintersmith-nunjucks": "*"
   },
-  "repository": "none",
   "devDependencies": {
     "browser-sync": "^1.7.3",
     "browserify": "^6.2.0",
@@ -31,16 +31,14 @@
     "uglify-js": "~2.4.15",
     "watchify": "^2.1.1"
   },
-
   "scripts": {
-    "start": "parallelshell 'watchify -o ./contents/scripts/index.jsx -v -d .' ",
+    "start": "parallelshell 'watchify -o ./contents/scripts/index.jsx -v -d .' 'grunt' ",
     "build": "NODE_ENV=production browserify . | uglifyjs -cm > js/bundle.js",
     "test": "jest",
     "browser-sync": "browser-sync start --server --files='js/bundle.js, index.html, css/style.css'",
-    "node-sass": "node-sass --source-map css/style.css.map scss/style.scss css/style.css && autoprefixer css/style.css",
+    "node-sass": "node-sass --source-map content/scss/app.css.map work/scss/style.scss content/css/app.css && autoprefixer content/css/app.css",
     "watch-sass": "nodemon -w scss -e scss -x 'npm run node-sass'"
   },
-
   "author": "Bill Fisher",
   "browserify": {
     "transform": [

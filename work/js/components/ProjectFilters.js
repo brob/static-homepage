@@ -1,24 +1,27 @@
-var React = require('react');
+var React = require('react/addons');
 
 var ProjectFilters = React.createClass({
 
-    setActive: function() {
-
-    },
 
     render: function() {
-        var filter = this.props.filter;
+        var cx = React.addons.classSet,
+            filter = this.props.filter,
+            filterClass = cx({
+                'active': this.props.activeFilter == filter
+            });
+
 
 
 
         return (
-            <div>
+            <li>
                 <a
                 data-filter-name={filter}
-                onClick={this.props.onUserInput.bind(null, filter)}>
+                onClick={this.props.onUserInput.bind(null, filter)}
+                className={filterClass}>
                     {filter}
                 </a>
-            </div>
+            </li>
         )
     }
 
