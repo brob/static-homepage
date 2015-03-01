@@ -42,7 +42,7 @@ var Index = React.createClass({
         }
 
         return (
-            <div className="row">
+            <div className="container">
                 <NavToggle {...this.state} handleRouteClick={this.handleRouteClick} toggleLink={this.state.toggleLink} />
 
                 <ReactCSSTransitionGroup component="div" className="row" transitionName="mainSwap">

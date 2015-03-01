@@ -38,15 +38,16 @@ var ProjectView = React.createClass({
             });
 
         });
+//        filters.push("All");
 
         filters.forEach(function(filter) {
 
             filterList.push(<ProjectFilters {...this.state} filter={filter} key={filter} onUserInput={this.handleClick} />)
         }.bind(this));
-
         this.state.projects.forEach(function(project) {
 
             projectList.push(<ProjectItem project={project} key={project.name} />);
+
         });
 
 
@@ -56,7 +57,7 @@ var ProjectView = React.createClass({
                 <ul className="inline-list">
                     {filterList}
                 </ul>
-                    <ReactCSSTransitionGroup component="ul" className="small-block-grid-3" transitionName="projectFilter">
+                    <ReactCSSTransitionGroup component="ul" className="medium-block-grid-3 small-block-grid-2 project-group" transitionName="projectFilter">
                         {projectList}
                     </ReactCSSTransitionGroup>
             </div>

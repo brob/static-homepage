@@ -10,11 +10,12 @@ var ProjectItem = React.createClass({
         return (
                 <li>
                     <a href={project.url} title={projectTitle}>
-                        {project.name}<br />
+
                         <div className="project-image">
                             <img src={project.covers[404]} />
                             <div className="project-hover"><div className="background"></div></div>
                         </div>
+                        <h5>{project.name}</h5>
                     </a>
                 </li>
         )
