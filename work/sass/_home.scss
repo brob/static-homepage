@@ -163,7 +163,35 @@ h1, h2, h3, h4 {
 
 
 
+.mainSwap-leave {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+.mainSwap-leave.mainSwap-leave-active {
+    opacity: 0.01;
+    width: 1px;
+}
+.mainSwap-enter {
+    opacity: 0.01;
+    width: 1%;
+    transition: opacity 1s ease-out;
+}
+
+.mainSwap-enter.mainSwap-enter-active {
+    opacity: 1;
+}
+
+
+
+
+    .projects {
+        text-align: center;
+        margin-top: 30px;
+    }
     .inline-list {
+        margin: 0 auto 20px;
+        display: inline-block;
         li a {
             padding: 10px 15px;
             background: $secondary-background;

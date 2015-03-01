@@ -2238,13 +2238,36 @@ h1, h2, h3, h4 {
 .projectFilter-enter.projectFilter-enter-active {
   opacity: 1; }
 
-.inline-list li a {
-  padding: 10px 15px;
-  background: #75A8CC;
-  color: #FFFFFF; }
-  .inline-list li a:hover, .inline-list li a.active {
-    background: #BCFF43;
-    color: #75A8CC; }
+.mainSwap-leave {
+  opacity: 1;
+  transition: opacity 1s ease-in; }
+
+.mainSwap-leave.mainSwap-leave-active {
+  opacity: 0.01;
+  width: 1px; }
+
+.mainSwap-enter {
+  opacity: 0.01;
+  width: 1%;
+  transition: opacity 1s ease-out; }
+
+.mainSwap-enter.mainSwap-enter-active {
+  opacity: 1; }
+
+.projects {
+  text-align: center;
+  margin-top: 30px; }
+
+.inline-list {
+  margin: 0 auto 20px;
+  display: inline-block; }
+  .inline-list li a {
+    padding: 10px 15px;
+    background: #75A8CC;
+    color: #FFFFFF; }
+    .inline-list li a:hover, .inline-list li a.active {
+      background: #BCFF43;
+      color: #75A8CC; }
 
 li .project-image {
   position: relative; }

@@ -52,7 +52,7 @@ var ProjectView = React.createClass({
 
 
         return (
-            <div className="container">
+            <div className="container projects">
                 <ul className="inline-list">
                     {filterList}
                 </ul>

@@ -32,7 +32,7 @@
     "watchify": "^2.1.1"
   },
   "scripts": {
-    "start": "parallelshell 'watchify -o ./contents/scripts/index.jsx -v -d .' 'grunt' ",
+    "start": "parallelshell 'wintersmith preview' 'watchify -o ./contents/scripts/index.jsx -v -d .' 'grunt' ",
     "build": "NODE_ENV=production browserify . | uglifyjs -cm > js/bundle.js",
     "test": "jest",
     "browser-sync": "browser-sync start --server --files='js/bundle.js, index.html, css/style.css'",
