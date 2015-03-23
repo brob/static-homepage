@@ -2033,7 +2033,8 @@ select {
 /* 1921px */
 a {
   color: #BCFF43;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 h5 {
   margin: 5px 0;
