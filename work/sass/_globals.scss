@@ -7,3 +7,25 @@ h5 {
     margin: 5px 0;
     font-size: 1.2em;
 }
+.blog_tag {
+    position: relative;
+    z-index: 100;
+    a {
+        position: absolute;
+        top: -1px;
+        right: 20%;
+        padding: 0px 30px 2px;
+      //  background: -webkit-linear-gradient(darken($primary-accent, 12%), $primary-accent); /* For Safari 5.1 to 6.0 */
+        //background: -o-linear-gradient(darken($primary-accent, 12%), $primary-accent); /* For Opera 11.1 to 12.0 */
+        //background: -moz-linear-gradient(darken($primary-accent, 12%), $primary-accent); /* For Firefox 3.6 to 15 */
+        //background: linear-gradient(darken($primary-accent, 12%), $primary-accent); /* Standard syntax */
+        color: $primary-accent;
+        border: 1px solid $primary-accent;
+        transition: .5s background, .5s padding;
+
+        &:hover {
+            background: darken($primary-accent, 25%);
+            padding: 10px 30px 15px;
+        }
+    }
+}

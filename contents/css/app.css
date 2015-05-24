@@ -2040,6 +2040,21 @@ h5 {
   margin: 5px 0;
   font-size: 1.2em; }
 
+.blog_tag {
+  position: relative;
+  z-index: 100; }
+  .blog_tag a {
+    position: absolute;
+    top: -1px;
+    right: 20%;
+    padding: 0px 30px 2px;
+    color: #A0FF00;
+    border: 1px solid #A0FF00;
+    transition: .5s background, .5s padding; }
+    .blog_tag a:hover {
+      background: #508000;
+      padding: 10px 30px 15px; }
+
 /*
 @font-face {
     font-family: 'open-sans-light';
